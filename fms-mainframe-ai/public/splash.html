@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@300;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: transparent; 
+      color: white;
+      overflow: hidden; /* Prevents scrollbars if scaled */
+    }
+    
+    .container {
+      /* Completely removed the background, blur, and border for a pure float */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    img {
+      width: 400px; /* Perfectly scaled for the new 800x800 window */
+      height: auto;
+      margin-bottom: 32px;
+      animation: float 3s ease-in-out infinite;
+      /* Heavy drop shadow to separate it from whatever wallpaper is behind it */
+      filter: drop-shadow(0 20px 25px rgba(0, 0, 0, 0.6)); 
+    }
+
+    h1 { 
+      margin: 0; 
+      font-family: 'Orbitron', sans-serif; 
+      font-size: 46px; 
+      letter-spacing: 8px; 
+      font-weight: 900; 
+      background: linear-gradient(to right, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.4));
+    }
+
+    h2 {
+      margin: 12px 0 28px 0;
+      font-family: 'Inter', sans-serif; 
+      font-size: 15px;
+      font-weight: 500;
+      color: #cbd5e1;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+
+    p { 
+      margin-top: 0; 
+      font-family: 'Inter', sans-serif;
+      font-size: 12px; 
+      color: #94a3b8; 
+      letter-spacing: 4px; 
+      font-weight: 500;
+      animation: pulse-text 2s infinite;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    @keyframes pulse-text {
+      0% { opacity: 0.3; }
+      50% { opacity: 1; }
+      100% { opacity: 0.3; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="./splash-logo.png" alt="MoE Logo">
+    <h1>FMS PRO</h1>
+    <h2>Developed by MoE</h2>
+    <p>INITIALIZING MAINFRAME...</p>
+  </div>
+</body>
+</html>

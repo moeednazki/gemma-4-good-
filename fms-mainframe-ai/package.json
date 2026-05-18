@@ -1,0 +1,77 @@
+{
+  "name": "fms-mainframe-pro",
+  "private": true,
+  "version": "1.0.2",
+  "type": "module",
+  "main": "main.cjs",
+  "homepage": "./",
+  "description": "FMS Mainframe Desktop Application",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "app:test": "vite build && electron .",
+    "app:build": "vite build && electron-builder"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.2.1",
+    "chart.js": "^4.5.1",
+    "electron-log": "^5.4.4",
+    "electron-updater": "^6.8.3",
+    "firebase": "^12.10.0",
+    "lucide-react": "^0.577.0",
+    "react": "^19.2.0",
+    "react-chartjs-2": "^5.3.1",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.13.1",
+    "recharts": "^3.8.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "autoprefixer": "^10.4.27",
+    "concurrently": "^9.2.1",
+    "electron": "^41.6.1",
+    "electron-builder": "^26.8.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^4.2.1",
+    "vite": "^7.3.1",
+    "wait-on": "^9.0.10"
+  },
+  "build": {
+    "appId": "com.fms.mainframe.pro",
+    "productName": "FMS Mainframe PRO",
+    "directories": {
+      "output": "Windows_Release",
+      "buildResources": "public"
+    },
+    "files": [
+      "dist/**/*",
+      "main.cjs"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "public/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "https://your-website-or-storage.com/updates/"
+      }
+    ]
+  }
+}

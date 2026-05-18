@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "6ddd4f36-73fe-4cd7-b791-8dc681b89ac2"
+      }
+    },
+    "android": {
+      "package": "com.moddy19.fmsmobileapp"
+    }
+  }
+}
