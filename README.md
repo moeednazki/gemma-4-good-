@@ -11,8 +11,8 @@
 ## 🔐 🎯 Quick-Access Demo Credentials
 To allow judges and technical reviewers to evaluate both the **Web Mainframe Dashboard** and the **Mobile Edge Client** seamlessly without hitting authorization barriers, use the following credentials:
 
-* **Administrator/Judge User ID:** `moeed`
-* **Secure Access Password:** `moddy`
+* **Administrator/Judge User ID:** `moeed`or 'admin'
+* **Secure Access Password:** `moddy`or 'admin'
 
 ---
 
